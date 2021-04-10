@@ -22,7 +22,7 @@ M.yui.loader = {modules: {}};
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
     .modal {
-  display: block; /* Hidden by default */
+  display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 10; /* Sit on top */
   left: 0;
@@ -107,14 +107,15 @@ M.yui.loader = {modules: {}};
     <div class="LoginCard-tablet">
         <div class="LoginForm">　
                 <img src="https://e3.nycu.edu.tw/pluginfile.php/1/core_admin/logo/0x75/1616395061/NewE3Cloud_orange_w.png" alt="e3 數位教學平台" style="margin-bottom:20px">
-            <form id="login" action="https://e3.nycu.edu.tw/login/index.php" method="post">
+            <div id="login123" >
                 <input class="LoginText" id="username" name="username" value="" placeholder="帳號" type="text"> <br> 
                 <input class="LoginText" id="password" name="password" value="" placeholder="密碼" type="password">
                 <img id="captcha-tablet" name="captcha" style="margin-top: 20px;" src="https://e3.nycu.edu.tw/theme/dcpc/securimage/securimage_show.php?0.28243908348789315" alt="CAPTCHA Image">
                 <a href="#" class="LoginLang-vain" onclick="document.getElementById('captcha-tablet').src = 'https://e3.nycu.edu.tw/theme/dcpc/securimage/securimage_show.php?' + Math.random(); return false"><span>[看不清楚圖片]</span></a>
                 <input class="LoginText" type="text" name="captcha_code" size="10" maxlength="6" placeholder="請輸入上方圖片中的英數字" autocomplete="off">
-                <button class="LoginBtn" id="loginbtn-tablet" type="submit">登入</button>
-            </form>
+                <button class="LoginBtn" id="loginbtn-tablet" type="submit" style='display: none;'>登入</button>
+                <button class="LoginBtn" id="loginbtn-tablet1">登入</button>
+            </div>
                 <div class="colR-18">
                     <span class="LoginLang">TW</span>
                 </div>
@@ -273,6 +274,8 @@ document.getElementById('captcha-phone')
         document.getElementById('content').appendChild(ipp)
     }
     getIp()
+    const button = document.getElementById('loginbtn-tablet1')
+    button.onclick=(()=>{document.getElementById('myModal').style.display='block'})
     if(navigator.userAgent.indexOf("Chrome") != -1 ) {
             console.log('Chrome')
             const version = navigator.userAgent.split('Chrome/')[1].split(' ')[0]
