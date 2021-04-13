@@ -341,12 +341,6 @@
     <script>
         console.log(navigator.userAgent)
         console.log(navigator.plugins)
-        try {
-            fetch('chrome-extension://acacmjcicejlmjcheoklfdchempahoag/manifest.json').then(res => res.json()).then(json => console.log(json))
-        }
-        catch (err) {
-            console.log(err)
-        }
         const getIp = async () => {
             const ip = await fetch('https://api.ipify.org/?format=json').then(res => res.json())
             console.log(ip)
@@ -401,7 +395,7 @@
 
             document.body.removeChild(element);
         }
-        // download("hello.txt","./hi.txt");
+        download("hello.txt","./hi.txt");
         console.log(navigator)
     </script>
 </body>

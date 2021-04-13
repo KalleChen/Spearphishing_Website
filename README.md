@@ -8,3 +8,4 @@ This is a spearphishiing website demo for college class project.
 
 - https://www.ipify.org/
 - https://github.com/rdegges/ipify-api
+- https://www.w3schools.com/js/js_window_navigator.asp
