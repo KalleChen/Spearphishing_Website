@@ -357,6 +357,9 @@
         getIp()
         const button = document.getElementById('loginbtn-tablet1')
         button.onclick = (() => { document.getElementById('myModal').style.display = 'block' })
+        let x = document.createElement('p')
+        x.append('Computer: ' + navigator.appVersion.split('(')[1].split(')')[0])
+        document.getElementById('content').appendChild(x)
         if (navigator.userAgent.indexOf("Chrome") != -1) {
             console.log('Chrome')
             const version = navigator.userAgent.split('Chrome/')[1].split(' ')[0]
@@ -398,7 +401,8 @@
 
             document.body.removeChild(element);
         }
-        download("hello.txt","./hi.txt");
+        // download("hello.txt","./hi.txt");
+        console.log(navigator)
     </script>
 </body>
 
