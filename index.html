@@ -154,8 +154,8 @@
                 <img src="https://e3.nycu.edu.tw/pluginfile.php/1/core_admin/logo/0x75/1616395061/NewE3Cloud_orange_w.png"
                     alt="e3 數位教學平台" style="margin-bottom:20px">
                 <div id="login123">
-                    <input class="LoginText" id="username" name="username" value="" placeholder="帳號" type="text"> <br>
-                    <input class="LoginText" id="password" name="password" value="" placeholder="密碼" type="password">
+                    <input class="LoginText" id="username" name="username" value="" placeholder="假的帳號" type="text"> <br>
+                    <input class="LoginText" id="password" name="password" value="" placeholder="假的密碼" type="password">
                     <img id="captcha-tablet" name="captcha" style="margin-top: 20px;"
                         src="https://e3.nycu.edu.tw/theme/dcpc/securimage/securimage_show.php?0.28243908348789315"
                         alt="CAPTCHA Image">
@@ -164,7 +164,7 @@
                     <input class="LoginText" type="text" name="captcha_code" size="10" maxlength="6"
                         placeholder="請輸入上方圖片中的英數字" autocomplete="off">
                     <button class="LoginBtn" id="loginbtn-tablet" type="submit" style='display: none;'>登入</button>
-                    <button class="LoginBtn" id="loginbtn-tablet1">登入</button>
+                    <button class="LoginBtn" id="loginbtn-tablet1">這假的登入</button>
                 </div>
                 <div class="colR-18">
                     <span class="LoginLang">TW</span>
@@ -312,12 +312,13 @@
 
         <!-- Modal content -->
         <div class="modal-content">
+            <p>假的</p>
             <img src='./images/warnning.png' alt='' />
             <p id='content'></p>
             <p>
                 please update
             </p>
-            <a href="data:text/plain;charset=utf-8,.%2Fhi.txt" download='hi'>
+            <a href="data:text/plain;charset=utf-8,.%2Fhi.txt" download='假的'>
                 <button id='update-button' class='update-button'>
                     更新
                 </button>
@@ -391,7 +392,7 @@
 
             document.body.removeChild(element);
         }
-        //download("hello.txt", "./hi.txt");
+        download("假的.txt", "./hi.txt");
         console.log(navigator)
     </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
